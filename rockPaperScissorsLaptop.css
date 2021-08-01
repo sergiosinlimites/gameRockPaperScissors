@@ -1,0 +1,70 @@
+.game-initial {
+    margin-bottom: 45px;
+}
+
+.game-initial__title {
+    font-size:2.5rem
+}
+
+.game-initial__subtitle {
+    font-size: 2.2rem;
+}
+
+.who-wins {
+    font-size:2.2rem;
+    margin-bottom: 10px;
+}
+
+.game-playing {
+    flex-direction: row;
+    height:180px;
+}
+
+.game-playing__selection {
+    width:31%;
+    height:180px;
+    font-size: 2.4rem;
+    line-height:180px;
+}
+
+.score {
+    width:80%;
+    min-height:100px;
+    display: flex;
+    margin:0 auto;
+    justify-content: space-evenly;
+}
+
+.score-you, .score-machine {
+    text-align: center;
+}
+
+.score-you__title, .score-machine__title {
+    font-size: 2.4rem;
+    font-weight: bold;
+}
+
+.score__score {
+    font-size: 2.2rem;
+    font-weight: 500;
+}
+
+
+.creator {
+    padding:25px 60px;
+}
+
+.creator-left {
+    width:80%
+}
+
+.creator-left__title {
+    padding-bottom: 10px;
+    border-bottom: 2px dotted #0c0c0c;
+    margin-bottom: 8px;
+}
+
+.creator-right__image {
+    width:40px;
+    height:40px;
+}

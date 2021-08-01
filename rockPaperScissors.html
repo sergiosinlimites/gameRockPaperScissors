@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, paper, scissors</title>
+    <link rel="stylesheet" href="./rockPaperScissors.css">
+    <link rel="stylesheet" href="./rockPaperScissorsTablet.css" media="screen and (min-width:768px)">
+    <link rel="stylesheet" href="./rockPaperScissorsLaptop.css" media="screen and (min-width:1024px)">
+</head>
+<body>
+    <div class="content">
+        <div class="game-initial">
+            <h1 class="game-initial__title">ROCK, PAPER, SCISSORS</h1>
+            <span class="game-initial__subtitle">Will you defeat the machine?</span>
+            <span class="game-initial__select">Select your weapon</span>
+        </div>
+        <span id="who-wins" class="who-wins"> </span>
+        <div class="game-playing">
+            <div class="game-playing__selection" id="rockoption">Rock</div>
+            <div class="game-playing__selection" id="paperoption">Paper</div>
+            <div class="game-playing__selection" id="scissorsoption">Scissors</div>
+        </div>
+    
+        <div class="score">
+            <div class="score-you">
+                <h2 class="score-you__title">Your score</h2>
+                <span id="yourscore" class="score__score">0</span>
+            </div>
+            <div class="score-machine">
+                <h2 class="score-machine__title">Machine score</h2>
+                <span id="machinescore" class="score__score">0</span>
+            </div>
+        </div>
+    
+        <footer class="creator">
+            <div class="creator-left">
+                <h2 class="creator-left__title">Who created this?</h2>
+                <p class="creator-left__presentation">Hello, my name is Sergio, I am a Colombian Frontend Developer majoring in JavaScript to become a FullStack JavaScript Developer. Here are my social networks if you want to contact me or just talk ;)</p>
+            </div>
+            <div class="creator-right">
+                <a href="https://github.com/sergiosinlimites"><img class="creator-right__image" src="https://image.flaticon.com/icons/png/512/25/25231.png" alt="My GitHub"></a>
+                <a href="https://www.linkedin.com/in/sergioandresbolanos/"><img class="creator-right__image" src="http://pngimg.com/uploads/linkedIn/linkedIn_PNG32.png" alt="My LinkedIn"></a>
+            </div>
+        </footer>
+        <script src="./rockPaperScissors.js"></script>
+    </div>  
+</body>
+</html>
