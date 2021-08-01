@@ -47,7 +47,7 @@ window.addEventListener("DOMContentLoaded", function(){
             whoWins.textContent = "The machine wins, scissors cut paper";
             machineWins(machineScore);
         } else {
-            console.log("There was an error");
+            console.log("There was an error oh-oh");
         }
 
         function machineWins(scoreString){
