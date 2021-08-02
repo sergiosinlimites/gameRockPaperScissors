@@ -3,7 +3,7 @@ window.addEventListener("DOMContentLoaded", function(){
     document.getElementById("paperoption").addEventListener("click", playPaper);
     document.getElementById("scissorsoption").addEventListener("click", playScissors);
 
-    let playingGameDiv = document.getElementById("game-playing-div");
+    let playingGameDiv = document.getElementById("game-playing-div")
     let finalWinner = document.getElementById("final-winner")
     let restartButton = document.getElementById("restart")
     restartButton.addEventListener("click",restartGame);
@@ -45,36 +45,57 @@ window.addEventListener("DOMContentLoaded", function(){
         let whoWins = document.getElementById("who-wins");
         /* console.log(whoWins) */
 
-        if (user === "rock" && machine === 1 || user === "paper" && machine === 2 || user === "scissors" && machine === 3){
-            whoWins.textContent = "Draw";
-        } else if(user === "rock" && machine === 2){
-            whoWins.textContent = "The machine wins, paper consumes rock";
-            machineWins(machineScore);
-        } else if(user === "rock" && machine === 3){
-            whoWins.textContent = "You win, rock smashes scissors";
-            userWins(yourScore)
-        } else if(user === "scissors" && machine === 1){
-            whoWins.textContent = "The machine wins, rock smashes scissors";
-            machineWins(machineScore);
-        } else if(user === "scissors" && machine === 2){
-            whoWins.textContent = "You win, scissors cut paper";
-            userWins(yourScore)
-        } else if(user === "paper" && machine === 1){
-            whoWins.textContent = "You win, paper consumes rock";
-            userWins(yourScore)
-        } else if(user === "paper" && machine === 3){
-            whoWins.textContent = "The machine wins, scissors cut paper";
-            machineWins(machineScore);
-        } else {
-            console.log("There was an error oh-oh");
+        switch(user){ //revisa quién de los dos ganó o si empataron, lo escribe y actualiza el puntaje con la otra función
+            case "rock":
+                switch(machine){
+                    case 1:
+                        whoWins.textContent = "Draw";
+                        break;
+                    case 2:
+                        whoWins.textContent = "The machine wins, paper consumes rock";
+                        machineWins(machineScore);
+                        break;
+                    case 3:
+                        whoWins.textContent = "You win, rock smashes scissors";
+                        userWins(yourScore);
+                        break;
+                }
+            case "paper":
+                switch(machine){
+                    case 1:
+                        whoWins.textContent = "You win, paper consumes rock";
+                        userWins(yourScore);
+                        break;
+                    case 2:
+                        whoWins.textContent = "Draw";
+                        break;
+                    case 3:
+                        whoWins.textContent = "The machine wins, scissors cut paper";
+                        machineWins(machineScore);
+                        break;
+                }
+            case "scissors":
+                switch(machine){
+                    case 1:
+                        whoWins.textContent = "The machine wins, rock smashes scissors";
+                        machineWins(machineScore);
+                        break;
+                    case 2:
+                        whoWins.textContent = "You win, scissors cut paper";
+                        userWins(yourScore);
+                        break;
+                    case 3:
+                        whoWins.textContent = "Draw";
+                        break;
+                }
         }
 
         function machineWins(scoreString){
-            let machineScoreNum = Number(scoreString, 10);
+            let machineScoreNum = Number(scoreString, 10); //se pasa a un número el texto que dice la puntuación
             machineScoreNum++;
             let machineScoreToString = machineScoreNum.toString();
             /* console.log(machineScoreToString); */
-            document.getElementById("machinescore").textContent = machineScoreToString;
+            document.getElementById("machinescore").textContent = machineScoreToString; //se devuelve el nuevo resultado de la puntuación
             if(machineScoreNum >= 5){
                 restartButton.classList.remove("dissappear");
                 restartButton.classList.add("appearInline");
@@ -98,4 +119,3 @@ window.addEventListener("DOMContentLoaded", function(){
         }
     }
 });
-

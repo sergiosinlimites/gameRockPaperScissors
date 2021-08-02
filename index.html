@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock, paper, scissors</title>
     <link rel="stylesheet" href="./rockPaperScissors.css">
-    <link rel="stylesheet" href="./rockPaperScissorsTablet.css" media="screen and (min-width:768px)">
+    <link rel="stylesheet" href="./rockPaperScissorsTablet.css" media="screen and (min-width:738px)">
     <link rel="stylesheet" href="./rockPaperScissorsLaptop.css" media="screen and (min-width:1024px)">
 </head>
 <body>
@@ -16,8 +16,10 @@
             <span class="game-initial__subtitle">Will you defeat the machine?</span>
             <span class="game-initial__select">Select your weapon</span>
         </div>
-        <span id="who-wins" class="who-wins"> </span>
-        <div class="game-playing">
+        <span id="final-winner" class="final-winner"></span>
+        <span id="restart" class="restart dissappear">Restart</span>
+        <span id="who-wins" class="who-wins"></span>
+        <div class="game-playing" id="game-playing-div">
             <div class="game-playing__selection" id="rockoption">Rock</div>
             <div class="game-playing__selection" id="paperoption">Paper</div>
             <div class="game-playing__selection" id="scissorsoption">Scissors</div>
@@ -44,6 +46,7 @@
                 <a href="https://www.linkedin.com/in/sergioandresbolanos/"><img class="creator-right__image" src="http://pngimg.com/uploads/linkedIn/linkedIn_PNG32.png" alt="My LinkedIn"></a>
             </div>
         </footer>
+        <!-- <script src="./rockPaperScissorsSwitch.js"></script> -->
         <script src="./rockPaperScissors.js"></script>
     </div>  
 </body>
